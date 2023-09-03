@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import { ChevronLeft, ChevronRight, Rocket } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Banner = () => {
     const [imageCount, setImageCount] = useState(1);
@@ -19,8 +20,13 @@ const Banner = () => {
 
     return (
         <div
-            className={`relative bg-[url('/rocket${imageCount}.jpg')] w-full h-screen bg-cover bg-center flex flex-col justify-center px-4 md:px-10 lg:px-20`}
+            className="relative w-full h-screen flex flex-col justify-center px-4 md:px-10 lg:px-20"
         >
+            <Image
+                src={`/rocket${imageCount}.jpg`}
+                fill
+                className="object-center"
+            />
             <div className="absolute bg-black/50 w-full h-full top-0 left-0 right-0" />
             <div className="text-white z-10 w-fit pl-10">
                 <h1 className="text-7xl py-5">Galactic Explorations</h1>
