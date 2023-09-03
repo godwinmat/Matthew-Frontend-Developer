@@ -10,8 +10,8 @@ const montserratAlternates = Montserrat_Alternates({
 });
 
 export const metadata = {
-    title: "SpaceX Launches🚀",
-    description: "Explore SpaceX's Launch Data",
+    title: "Rocket Launches🚀",
+    description: "Explore Rocket's Launch Data",
 };
 
 export default function RootLayout({ children }) {
